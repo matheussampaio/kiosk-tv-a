@@ -16,16 +16,17 @@
       margin: 0;
       overflow: hidden;
     }
-    
-    * {
-      cursor: none !important;
+
+    html * {
+      cursor: url('pointer.cur'), none;
     }
-    
+
     #frame {
       position: absolute;
       top: 0;
       width: 100%;
       height: 100%;
+      z-index: 10;
     }
   </style>
 </head>
@@ -39,7 +40,7 @@
     mozallowfullscreen="false"
     webkitallowfullscreen="false">
   </iframe>
-  
+
   <div id="frame"></div>
 
   <script>
@@ -48,7 +49,7 @@
       if (navigator.onLine) {
         document.getElementById('iframe').src = 'https://docs.google.com/presentation/d/e/2PACX-1vR8Uiqhc363gvT5paOoU2UDlazRIk7uZzROOmC9EBNFKqYl2UJDy637B7HcG2qZmp-KxyJR7I72w3Pa/embed?start=true&loop=true&delayms=30000&rm=minimal';
       }
-    }, 10 * 60 * 1000);
+    }, 2 * 60 * 60 * 1000);
   </script>
 </body>
 </html>
